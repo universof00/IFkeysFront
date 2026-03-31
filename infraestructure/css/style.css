@@ -1,0 +1,35 @@
+/* VARIÁVEIS DE CORES */
+:root {
+    --azul-principal: #2563EB;
+    --azul-claro: #60A5FA;
+    --fundo: #F1F5F9;
+    --branco: #FFFFFF;
+    --cinza-escuro: #1E293B;
+    --verde: #22C55E;
+    --vermelho: #EF4444;
+    --laranja: #F59E0B;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: var(--fundo);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--azul-principal);
+}
+
+h2 {
+    margin-top: 20px;
+    color: var(--azul-principal);
+}
+
+p {
+    margin-top: 8px;
+    color: var(--laranja);
+}
