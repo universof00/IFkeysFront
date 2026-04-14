@@ -1,4 +1,3 @@
-/* VARIÁVEIS DE CORES */
 :root {
     --azul-principal: #2563EB;
     --azul-claro: #60A5FA;
@@ -12,12 +11,19 @@
 
 body {
     font-family: Arial, sans-serif;
-    max-width: 700px;
+    max-width: 800px;
+    min-width: 320px;
     margin: 40px auto;
     padding: 0 20px;
     background: var(--fundo);
     color: var(--cinza-escuro);
     line-height: 1.6;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -32,4 +38,67 @@ h2 {
 p {
     margin-top: 8px;
     color: var(--laranja);
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#menu li {
+    background: var(--azul-principal);
+    border-radius: 8px;
+    /*transition: 0.3s;*/
+}
+
+#menu li:hover {
+    background: var(--vermelho);
+}
+
+#menu a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+aside {
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--fundo);
+    border-radius: 8px;
+    color: white;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        margin: 20px auto;
+    }
 }
