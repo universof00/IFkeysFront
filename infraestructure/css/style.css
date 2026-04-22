@@ -11,64 +11,43 @@
 
 body {
     font-family: Arial, sans-serif;
-    max-width: 800px;
     min-width: 320px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 10px; 
     background: var(--fundo);
     color: var(--cinza-escuro);
     line-height: 1.6;
 }
-
 
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-h1 {
-    color: var(--azul-principal);
-}
-
-h2 {
-    margin-top: 20px;
-    color: var(--azul-principal);
-}
-
-p {
-    margin-top: 8px;
-    color: var(--laranja);
-}
-
 #menu ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column; 
+    gap: 10px; 
     padding: 0;
-    margin-top: 15px;
 }
 
 #menu li {
     background: var(--azul-principal);
     border-radius: 8px;
-    /*transition: 0.3s;*/
+    width: 100%; 
+    transition: 0.3s;
 }
 
 #menu li:hover {
     background: var(--vermelho);
-}
-
+} 
 #menu a {
     display: block;
-    padding: 10px 15px;
+    padding: 15px; 
     color: var(--branco);
     text-decoration: none;
     font-weight: bold;
-}
-
-#menu a:hover {
-    text-decoration: underline;
+    text-align: center;
 }
 
 main {
@@ -79,26 +58,51 @@ main {
 
 aside {
     margin-top: 20px;
-    padding: 10px;
-    background: var(--fundo);
+    padding: 15px;
+    /*background: var(--azul-claro);*/
     border-radius: 8px;
-    color: white;
+    text-align: center;
 }
-
 
 footer {
     text-align: center;
     margin-top: 30px;
-    font-size: 16px;
+    font-size: 0.9rem; 
 }
 
-@media (max-width: 600px) {
-    #menu ul {
-        flex-direction: column;
-        align-items: center;
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        margin: 30px auto;
+        max-width: 90%;
     }
 
+    #menu ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #menu li {
+        width: auto;
+    }
+}
+
+@media (min-width: 1025px) {
     body {
-        margin: 20px auto;
+        max-width: 1100px;
+        margin: 40px auto;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem; 
+    }
+
+    #menu ul {
+        flex-direction: row;
+        justify-content: flex-end;
     }
 }
